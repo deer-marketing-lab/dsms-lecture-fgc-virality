@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Word of Mouth & Virality"
 subtitle: "Digital and Social Media Strategies"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -13,21 +13,485 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
-class: font200
+class: font160
 
 # Learning Goals for this Week
 
-TBD
+* Identify why estimated online WoM effects on demand are difficult to estimate
+* Summarise whether valence/sentiment or volume influences demand by linking results between papers 
+* Define the term "Viral Marketing"
+* Explain the tension between "viral-" and "valuable" marketing 
+* Summarize the main features of "valuably viral" ads
+* Distinguish between detection, prevention and mitigation of online firestorms
+* Explain what managers can do to prevent and mitigate online firestorms
+
+---
+class: font140
+# Today's Topic Coverage
+
+
+The Effects of Online User Reviews on Movie Box Office Performance: Accounting for Sequential Rollout and Aggregation Across Local Markets
+
+* [Chintagunta, Gopinath & Venkataraman (2010)](https://pubsonline.informs.org/doi/pdf/10.1287/mksc.1100.0572)
+
+Valuable Virality 
+
+* [Akpinar & Berger (2017)](https://doi.org/10.1509/jmr.13.0350)
+
+Detecting, Preventing, and Mitigating Online Firestorms in Brand Communities 
+
+* [Herhausen, Ludwig, Grewal, Wulf & Schoegel (2019)](https://journals.sagepub.com/doi/10.1177/0022242918822300)
+
+Causal Inference in Word-of-Mouth Research: Methods and Results
+
+* [Seiler, Yao & Zervas (2018)](https://songyao21.github.io/Research_Papers/WOM_book_chapter.pdf) 
+* (Recommended -- we won't cover this in class)
 
 ---
 class: inverse, center, middle
 
-# Section XX
+# Online User Reviews & Movie Box Office Performance
 
 ---
-# Slide Title 
+class: font160
+# Motivation 
 
-course content here
+**Strategic Question**: How does volume, valence and variance of online user reviews impact product demand? 
+
+* Some definitions: 
+  * **Online Word of Mouth**: user reviews on social media 
+    * Thought of as different from star ratings 
+  * **Valence** (aka *sentiment*): how positive / negative the reviews are
+
+**Why relevant?** 
+
+* Volume vs Valence effects are widely debated
+* And (generally) hard to measure
+* Relevant for new products, experience goods
+  * Movie industry is a good laboratory for these products
+
+---
+class: font140
+# Data 
+
+* Time period: November 2003 to February 2005
+
+* Movies: 148 
+
+* Yahoo! Movies discussion boards
+
+* Opening weekend box office data across DMAs
+
+* Why DMA level data important here? 
+  1. Movies weren't always released across all of US on same day
+  2. Allows evolution in OWoM metrics for the same movie on an "opening" weekend
+
+**Why not an experiment?** 
+
+* Experimental variation in volume and sentiment (almost) impossible
+* Paper pre-dates the experimental revolution
+
+---
+# Variable Definitions 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/cgv_data.png"
+knitr::include_graphics(url)
+```
+
+---
+# Regression Model 
+
+**Regression Equation**: 
+
+```{r, echo = FALSE, fig.align = "center", out.width="40%"}
+url <- "figs/cgv_regression.png"
+knitr::include_graphics(url)
+```
+
+$i$ is movie, $j$ is DMA (region)
+
+**Variables of Interest**: $\gamma_1$, $\gamma_2$, $\gamma_3$
+
+**Bells and Whistles (in method)**: 
+
+* Endogeneity (offline vs online, omitted variables)
+* Correlation in errors across markets
+
+$\implies$ fix via Instrumental Variables + tweaks to standard error calculation you're used to
+
+---
+# Main Results 
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/cgv_main.png"
+knitr::include_graphics(url)
+```
+
+**Valence is** statistically significant 
+
+**Volume is not**
+
+---
+# Comparison to National Aggregation 
+
+.center[**National Demand is what people "usually" do**]
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/cgv_national.png"
+knitr::include_graphics(url)
+```
+
+**Valence is not** statistically significant , **Volume is**
+
+---
+class: font160
+# Takeaways 
+
+* Emphasizes the role of **valence** / **sentiment** of online reviews in influencing new product demand in experience goods markets 
+  * In **contrast** to **volume**
+  * Which is what previous studies emphasized
+
+* Marketers should find ways to spread **positive** online WoM to boost demand 
+
+---
+class: font150
+# Recent Developments I 
+
+.center[
+**Can we get experimental variation in volume and sentiment?**
+]
+
+* Maybe if there's a "Natural Experiment"
+* Studied by [Seiler, Yao & Wang (2018)](https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1045) 
+
+**Setting**: Shutdown of Sina Weibo in mainland China & but not HK
+* Industry: Existing TV shows 
+
+**Findings**: 
+
+* Volume not sentiment is significant
+* Small elasticities, approx 0.02 
+* Mechanism at play is consumption complementarities 
+
+---
+class: font150
+# Recent Developments II
+
+.center[
+**How far to "believable" numbers can get get without experimental variation?** 
+]
+
+* If we can **control** for (almost) all the omitted variables (offline stuff)
+* Studied by [Deer, Crawford, Chintagunta (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4227912) 
+
+**Setting**: US Movie Industry & Twitter WoM
+
+**Findings**: 
+
+* Distinguish Pre- vs Post release volume and sentiment
+* Volume **and** sentiment significant
+* Small-ish volume elasticities, larger sentiment elasticities 
+* Differs across **types** of movies
+* Mechanisms: Buzz, awareness, social learning
+
+---
+class: inverse, center, middle
+
+# Valuable Virality 
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: Can a firm create shareable ads that benefit brands?
+
+i.e. ads that are
+
+* Viral: highly shared, and 
+* Valuable: impact KPIs of interest
+
+**Why relevant?** 
+
+* Rush for highly shareable ad content ...
+* At the expense of advertising effectiveness 
+
+.center["*Content aspects that increase sharing seem to decrease effectivess*"]
+
+* Competing effects of informational vs emotional appeals
+
+---
+class: font150
+# Flow of the Paper 
+
+Multiple studies $\rightarrow$ "Typical" consumer behaviour style paper
+
+**Study 0** Examine sharing of online video ads
+
+* Do certain types of ads generate more virality in "real" data?
+
+**Study 1**: Experiment to test ad type on shares and brand outcomes
+
+**Study 2**: Enriches Study 1 to ...
+
+* Rule out alternative explanations 
+* Test external validity
+
+**Study 3**: Investigate mechanisms behind the effect
+
+---
+class: font150
+# Field Observation of Viral Ads 
+
+Data: Unruly.co 
+
+* Prominent viral ad tracking platform
+
+Time: June 2003  
+
+Outcome: Number of shares in 6 months after launch 
+
+Covariates: 
+
+* Informative vs Emotional on a 7 point scale 
+* Integral-ness of brand to narrative
+
+---
+class: font150
+# Field Observation: Findings 
+
+* Trade off emotional ads vs brand integralness
+
+```{r, echo = FALSE, fig.align = "center", out.width="40%"}
+url <- "figs/vv_fig1.png"
+knitr::include_graphics(url)
+```
+
+* Emotional ads are shared more than informative ads
+
+* Informative ads are shared more when brand integral to narrative 
+* Brand integral-ness not important in adds that emphasize emotional appeal
+
+---
+class: font150
+# Study 1: Setup
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/vv_study1_stimuli.png"
+knitr::include_graphics(url)
+```
+
+Lab Experiment: Undergrads @ Wharton
+
+* Randomly assigned an ad, then asked 
+  1. Willingness to share 
+  2. Brand Evaluation 
+  3. Purchase Likelihood
+
+---
+class: font150
+# Study 1: Results
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/vv_study1_results.png"
+knitr::include_graphics(url)
+```
+
+.center[Emotional integral "best of both worlds"]
+
+---
+class: font150
+# Study 2: Setup
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/vv_study2_stimuli.png"
+knitr::include_graphics(url)
+```
+
+Lab Experiment: Undergrads @ MEF
+
+---
+# Study 2: Results
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/vv_study2_results.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Study 3
+
+Same as Study 2, but 
+
+* at Erasmus U
+* Tries to get at mechanisms via mediation analysis 
+
+Main results: 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="50%"}
+url <- "figs/vv_study3_results_main.png"
+knitr::include_graphics(url)
+```
+
+---
+# Study 3: Mechanisms
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/vv_study3_results_mediation.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Takeaways
+
+* Emotional ads increase sharing 
+* Informative ads increase brand evaluation and purchase intention 
+* Emotional (brand) Integral ads combine both effects 
+  * This is the "valuable virality" the authors care about
+  * They argue  this is by:
+    * (a) creating positive inferences about persuasion, and 
+    * (b) increasing brand knowledge 
+  * (... but I can't see a competing story being thoroughly tested) 
+
+---
+class: inverse, center, middle
+
+# Online Firestorms in Brand Communities 
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: How can a firm detect, prevent and mitigate online firestorms in brand communities
+
+* **Online Firestorm**: negative OWoM that gets substantial support from other customers quickly
+
+
+**Why relevant?** 
+
+* 72% of firms rate preparedness for online firestorms as below average
+* Limited understanding at how to deal with negative OWoM 
+* Difficulty predicting what happens when negative OWoM propagates through a large audience
+
+---
+# Online Firestorm Erupting 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_eruption.png"
+knitr::include_graphics(url)
+```
+
+---
+# Online Firestorm Prevention 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_prevention.png"
+knitr::include_graphics(url)
+```
+
+---
+# Online Firestorm Mitigation
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_mitigation.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# Data 
+
+**Source**: Facebook Brand Communities for S&P 500 companies 
+
+**Date Range**: October 2011 to Jan 2016
+
+**Sample**: 472,995 negative posts across 89 online brand communities
+
+**Important Definitions**:
+
+* SST = strength of structural ties
+  * Likes + comments $\times$ Given / received in community by a poster 
+
+* LSM = linguistic similarity
+  * How similar is complaining customers language with that of the existing posts in brand community
+
+**Lurking question?** Firestorms vs Product Harm crises? 
+
+* Firestorms emerge and end usually within 24 hours
+
+---
+# The Paper in a Nutshell
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_paper_nutshell.png"
+knitr::include_graphics(url)
+```
+
+---
+# Predicting Firestorms
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/of_model_prediction.png"
+knitr::include_graphics(url)
+```
+
+---
+# Prevention 
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/of_model_prevention.png"
+knitr::include_graphics(url)
+```
+
+---
+# Mitigation
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/of_model_mitigation.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Summary 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_summary.png"
+knitr::include_graphics(url)
+```
+
+Remark: Everything here is **correlation**
+
+* Don't be swayed by authors want to interpret causally 
+
+---
+class: inverse, center, middle
+
+# Recap 
+
+---
+class: font160
+# Summary 
+
+* Much debate about **volume versus sentiment** of user generated content and their **impacts on demand for products** 
+  * Know which paper pushes which story and (intuitively) how 
+  * Older estimates are large, **new estimates** are **much smaller** but significant 
+* **Trade off** between **shareability** and **KPI performance** of ads 
+  * "Valuably Viral" ads use emotion and branding to try and balance both 
+* Responding to **online firestorms** requires managers to **respond in a fast and tailored way**
+  * Eg: High arousal $\rightarrow$ explanation 
+  * Vary use of empathy and explanation if needing to reply to multiple messages around same issue
+
 
 ---
 # License & Citation
@@ -36,10 +500,10 @@ Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
 @misc{deerdsms2022,
-      title={"Digital and Social Media Strategies: Lecture Slide Template"},
+      title={"Digital and Social Media Strategies: Word of Mouth & Virality"},
       author={Lachlan Deer},
       year={2022},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-template"
+      url = "https://github.com/tisem-digital-marketing/dsms-lecture-12-wom-virality"
 }
 ```
 
