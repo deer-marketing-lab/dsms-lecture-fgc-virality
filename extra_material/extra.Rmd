@@ -1,0 +1,99 @@
+---
+class: inverse, center, middle
+
+# Online Firestorms in Brand Communities 
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: How can a firm detect, prevent and mitigate online firestorms in brand communities
+
+* **Online Firestorm**: negative OWoM that gets substantial support from other customers quickly
+
+
+**Why relevant?** 
+
+* 72% of firms rate preparedness for online firestorms as below average
+* Limited understanding at how to deal with negative OWoM 
+* Difficulty predicting what happens when negative OWoM propagates through a large audience
+
+---
+# Online Firestorm Erupting 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_eruption.png"
+knitr::include_graphics(url)
+```
+
+---
+# Online Firestorm Prevention 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_prevention.png"
+knitr::include_graphics(url)
+```
+
+---
+# Online Firestorm Mitigation
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_mitigation.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# Data 
+
+**Source**: Facebook Brand Communities for S&P 500 companies 
+
+**Date Range**: October 2011 to Jan 2016
+
+**Sample**: 472,995 negative posts across 89 online brand communities
+
+**Important Definitions**:
+
+* SST = strength of structural ties
+  * Likes + comments $\times$ Given / received in community by a poster 
+
+* LSM = linguistic similarity
+  * How similar is complaining customers language with that of the existing posts in brand community
+
+**Lurking question?** Firestorms vs Product Harm crises? 
+
+* Firestorms emerge and end usually within 24 hours
+
+---
+# The Paper in a Nutshell
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_paper_nutshell.png"
+knitr::include_graphics(url)
+```
+
+---
+# Predicting Firestorms
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/of_model_prediction.png"
+knitr::include_graphics(url)
+```
+
+---
+# Prevention 
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/of_model_prevention.png"
+knitr::include_graphics(url)
+```
+
+---
+# Mitigation
+
+```{r, echo = FALSE, fig.align = "center", out.width="60%"}
+url <- "figs/of_model_mitigation.png"
+knitr::include_graphics(url)
+```
