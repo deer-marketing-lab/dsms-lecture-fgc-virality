@@ -1,3 +1,7 @@
+Detecting, Preventing, and Mitigating Online Firestorms in Brand Communities 
+
+* [Herhausen, Ludwig, Grewal, Wulf & Schoegel (2019)](https://journals.sagepub.com/doi/10.1177/0022242918822300)
+
 ---
 class: inverse, center, middle
 
