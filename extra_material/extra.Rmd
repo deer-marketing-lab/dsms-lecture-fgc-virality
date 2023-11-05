@@ -101,3 +101,17 @@ knitr::include_graphics(url)
 url <- "figs/of_model_mitigation.png"
 knitr::include_graphics(url)
 ```
+
+
+---
+class: font150
+# Summary 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/of_summary.png"
+knitr::include_graphics(url)
+```
+
+Remark: Everything here is **correlation**
+
+* Don't be swayed by authors want to interpret causally 

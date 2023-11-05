@@ -22,39 +22,161 @@ class: font160
 * Define the term "Viral Marketing"
 * Explain the tension between "viral-" and "valuable" marketing 
 * Summarize the main features of "valuably viral" ads
-* Distinguish between detection, prevention and mitigation of online firestorms
-* Explain what managers can do to prevent and mitigate online firestorms
 
----
-class: font140
-# Today's Topic Coverage
-
-
-The Effects of Online User Reviews on Movie Box Office Performance: Accounting for Sequential Rollout and Aggregation Across Local Markets
-
-* [Chintagunta, Gopinath & Venkataraman (2010)](https://pubsonline.informs.org/doi/pdf/10.1287/mksc.1100.0572)
-
-Valuable Virality 
-
-* [Akpinar & Berger (2017)](https://doi.org/10.1509/jmr.13.0350)
-
-Detecting, Preventing, and Mitigating Online Firestorms in Brand Communities 
-
-* [Herhausen, Ludwig, Grewal, Wulf & Schoegel (2019)](https://journals.sagepub.com/doi/10.1177/0022242918822300)
-
-Causal Inference in Word-of-Mouth Research: Methods and Results
-
-* [Seiler, Yao & Zervas (2018)](https://songyao21.github.io/Research_Papers/WOM_book_chapter.pdf) 
-* (Recommended -- we won't cover this in class)
+UPDATE
 
 ---
 class: inverse, center, middle
 
-# Online User Reviews & Movie Box Office Performance
+# Preliminaries
 
 ---
 class: font160
-# Motivation 
+# Where Are We Now? 
+
+Course Themes:
+
+1. Classical Approaches to Measuring Advertising Effects
+2. Modern Evaluation of Digital Advertising Effects
+2. **User Generated Content & Social Media**
+3. Email & Mobile Marketing
+4. Issues in (Massive) Online Marketplaces
+5. Impact of Privacy Regulations 
+
+
+---
+class: font160
+# Our learning journey... 
+
+.center[.font120[Understanding causal effects of Social Media on Marketing Outcomes]]
+
+<br>
+
+*Previously*: Influencers
+
+**Today**: **Word of Mouth and Viral Marketing**
+
+*Next Week*: Email Marketing
+
+<br>
+
+`r icons::fontawesome("rocket", style = "solid")` Challenge: Hard to run controlled field experiments on social media content
+
+---
+class: font160
+# Today's Topic Coverage
+
+Does volume or sentiment of online word of mouth matter for consumers?
+
+* [Chintagunta, Gopinath & Venkataraman (2010)](https://pubsonline.informs.org/doi/pdf/10.1287/mksc.1100.0572)
+
+* *Recent Updates*: Whats new in Online Word of Mouth research?
+  * [Seiler, Yao & Zervas (2018)](https://songyao21.github.io/Research_Papers/WOM_book_chapter.pdf) 
+  * [Deer, Chintagunta & Crawford (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4227912)
+
+What helps ads go viral?
+
+* [Moldovan, Steinhart & Lehmann (2019)](https://doi.org/10.1016/j.intmar.2019.02.004)
+
+When is viral content valuable for firms?
+
+* [Akpinar & Berger (2017)](https://doi.org/10.1509/jmr.13.0350)
+
+---
+class: inverse, center, middle
+
+# Does volume or sentiment of online word of mouth matter for consumers?
+
+---
+class: font160
+# What is Word of Mouth Marketing?
+
+Consumer's interest in a company's product or service is reflected in their "daily dialogues"
+
+* Why is this *new* in "social media"?
+  * It isn't a new idea ...
+  * The "social web" with it's increasing connectivity makes it more salient
+  * ... and measurable
+
+---
+class: font160
+# Types of Word of Mouth 
+
+**Organic word of mouth**:
+
+* People become advocates for a product and have a desire to share their views.
+* **This is our focus**
+
+**Amplified word of mouth**: 
+
+* Marketers launch campaigns designed to encourage or accelerate WoM in existing or new communities.
+* We'll come back to this later in the course -- "Social Advertising"
+
+*Lurking Issue:* Online versus Offline
+
+* Distinction is always lurking in the background
+
+---
+class: font160
+# Social Media Word of Mouth Matters
+
+* Consumers now spend more than 135 mins per day on social media
+
+* Social Media fostered growing importance of WoM marketing
+
+* Chief Marketing Officers think online WoM matters
+    - ... Rationalized by consumer's trust in online info from peers (Nielsen, 2013)
+    - 64% of marketing executives believe word of mouth is the most effective form of marketing
+    - Only 6% say they have mastered it.
+
+---
+class: font160
+# Why Word of Mouth Might Matter
+
+.center[
+`r icons::fontawesome("question", style = "solid")` What reasons might word of mouth matter for consumers?
+]
+
+
+---
+class: font160
+# Why Word of Mouth Might Matter
+
+Mechanisms at play:
+
+1. Awareness
+2. Buzz
+3. Social learning
+4. Consumption complementarities
+
+Most often we see this operationalized as:
+
+* Awareness & Buzz $\rightarrow$ **volume** of tweets
+* Social learning $\rightarrow$ **sentiment** in tweet's text
+  * Sentiment often called *valence*
+* Consumption complementarities $\rightarrow$ *nothing*
+
+---
+class: font160
+# Why Should Marketers Care?
+
+- Social media can generate awareness, buzz and information diffusion that ultimately influences demand
+
+<br>
+
+- Important when:
+    1. Relying on "hyped release strategies"
+    2. Uncertainty about a product's quality
+
+<br>
+
+- Examples: movies, books, consumer electronics, video games, fashion
+
+.center[**Most relevant for new products early in release**]
+
+---
+class: font160
+# The paper...
 
 **Strategic Question**: How does volume, valence and variance of online user reviews impact product demand? 
 
@@ -72,7 +194,7 @@ class: font160
 
 ---
 class: font140
-# Data 
+# Application: The Movie Industry
 
 * Time period: November 2003 to February 2005
 
@@ -84,7 +206,7 @@ class: font140
 
 * Why DMA level data important here? 
   1. Movies weren't always released across all of US on same day
-  2. Allows evolution in OWoM metrics for the same movie on an "opening" weekend
+  2. Allows different in OWoM metrics for the same movie on an "opening" weekend
 
 **Why not an experiment?** 
 
@@ -111,7 +233,7 @@ knitr::include_graphics(url)
 
 $i$ is movie, $j$ is DMA (region)
 
-**Variables of Interest**: $\gamma_1$, $\gamma_2$, $\gamma_3$
+**Coefficients of Interest**: $\gamma_1$, $\gamma_2$, $\gamma_3$
 
 **Bells and Whistles (in method)**: 
 
@@ -144,9 +266,34 @@ knitr::include_graphics(url)
 
 **Valence is not** statistically significant , **Volume is**
 
+
+---
+class: font150
+# Whats Causing this Difference? 
+
+When we have **sequential** release of products
+
+* Sentiment is "moving around more" than volume 
+  * Why?
+  * Pre-release volume >> post-release volume 
+  * Can learn quality from consumers who have seen movie
+* And sequential release was/is a strategic decision
+  * In part due because firms want to leverage social learning
+
+$\implies$ likely that we see sentiment effects
+
+When we have **simultaneous** national release of products
+
+* More variation in volume than sentiment 
+* And sentiment is *noisy* for all products in the opening week
+
+$\implies$ likely that we see volume effects
+
+.font70[These thoughts are speculative on my part]
+
 ---
 class: font160
-# Takeaways 
+# Takeaways from the paper
 
 * Emphasizes the role of **valence** / **sentiment** of online reviews in influencing new product demand in experience goods markets 
   * In **contrast** to **volume**
@@ -175,30 +322,178 @@ class: font150
 * Mechanism at play is consumption complementarities 
 
 ---
-class: font150
+class: font140
 # Recent Developments II
 
 .center[
 **How far to "believable" numbers can get get without experimental variation?** 
+
+**Can we reconcile the volume vs sentiment debate?**
 ]
 
-* If we can **control** for (almost) all the omitted variables (offline stuff)
+* If we can **control** for (almost) all the omitted variables
 * Studied by [Deer, Crawford, Chintagunta (2022)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4227912) 
 
 **Setting**: US Movie Industry & Twitter WoM
 
 **Findings**: 
 
-* Distinguish Pre- vs Post release volume and sentiment
+* Distinguish Pre- vs Post- release volume and sentiment
 * Volume **and** sentiment significant
 * Small-ish volume elasticities, larger sentiment elasticities 
 * Differs across **types** of movies
-* Mechanisms: Buzz, awareness, social learning
+  *  Buzz: Franchise movies, 
+  *  Awareness: (expected) mid-tier movies, 
+  *  Social learning: (expected) small movies
 
 ---
 class: inverse, center, middle
 
-# Valuable Virality 
+# What helps ads go viral?
+
+---
+class: font160
+# Viral Marketing
+
+**Virality**: achieving a large number of views in a short time period due to consumers sharing content online. 
+
+
+.center[
+`r icons::fontawesome("question", style = "solid")` What do marketers and managers care about virality?
+]
+
+
+---
+class: font160
+# Viral Marketing
+
+**Virality**: achieving a large number of views in a short time period due to consumers sharing content online. 
+
+
+.center[
+`r icons::fontawesome("question", style = "solid")` What do marketers and managers care about virality?
+]
+
+* Ability to reach vast audiences in a short period of time at low cost
+* Increases brand visibility and recognition $\rightarrow$ brand equity 
+* (Increase in sales?)
+
+* Lurking differences: Seeded virality vs non-seeded virality
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: How to design ads to *seed* a viral advertising campaign
+
+Dimensions studied:
+
+* Creativity: intruguing, entertaining, gains consumer's attention 
+* Informativeness: provides needed information or essential facts
+
+**Why relevant?** 
+
+* Dimensions under a firm's control 
+* At the expense of advertising effectiveness 
+
+
+---
+# Conceptual Framework 
+
+<br>
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_conceptual.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Flow of the Paper: Lab Studies 
+
+Multiple studies $\rightarrow$ "Typical" consumer behaviour style paper
+
+**Study 1** Field data: Views of YouTube ads
+
+* Do certain types of ads generate more virality in "real" data?
+
+**Study 2**: Real Ads *and* circulation intentions 
+
+* For propagators vs non-propagators 
+
+**Study 3**: Vary creativity and informativeness of a focal ad
+
+* Control the ad content
+* Remove omitted variable bias driven by product category of the real ads
+
+---
+class: font160
+# Study 1: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_results.png"
+knitr::include_graphics(url)
+```
+
+* Creativity and informativeness positively correlated with views
+* Propagators too 
+  * Measured by number of comments ... so take this with a grain of salt
+
+
+---
+class: font140
+# Study 2: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/propogate_study2_results.png"
+knitr::include_graphics(url)
+```
+
+* Higher creativity associated with higher intent to disseminate
+* Propogators even more likely when highly informative and highly creative
+
+*Remark*: Propagator defined as "having friends" and "talking to them a lot"
+
+---
+# Study 3: Manipulating the Ad Content
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/propogate_study3_stimuli.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# Study 3: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_results.png"
+knitr::include_graphics(url)
+```
+
+Dissemination: 
+
+* High creativity positively associated with intent to share
+* High creativity and highly informative even more so for propagators 
+
+Social Status elevation: (a mechanism)
+
+* Propagators do this to elevate their social status
+
+---
+class: font160
+# Takeaways
+
+* Ads more likely to be shared when they are creative and informative 
+  * Even more likely for more socially connected individuals
+
+* Driven by socially connected individuals desire to elevate (perceived) social status 
+
+
+---
+class: inverse, center, middle
+
+# When is viral content valuable for firms?
 
 ---
 class: font160
@@ -222,7 +517,7 @@ i.e. ads that are
 
 ---
 class: font150
-# Flow of the Paper 
+# Flow of the Paper: Lab Studies 
 
 Multiple studies $\rightarrow$ "Typical" consumer behaviour style paper
 
@@ -329,7 +624,7 @@ class: font150
 Same as Study 2, but 
 
 * at Erasmus U
-* Tries to get at mechanisms via mediation analysis 
+* Suggests mechanisms driving main effects  
 
 Main results: 
 
@@ -361,118 +656,6 @@ class: font150
     * (b) increasing brand knowledge 
   * (... but I can't see a competing story being thoroughly tested) 
 
----
-class: inverse, center, middle
-
-# Online Firestorms in Brand Communities 
-
----
-class: font160
-# Motivation 
-
-**Strategic Question**: How can a firm detect, prevent and mitigate online firestorms in brand communities
-
-* **Online Firestorm**: negative OWoM that gets substantial support from other customers quickly
-
-
-**Why relevant?** 
-
-* 72% of firms rate preparedness for online firestorms as below average
-* Limited understanding at how to deal with negative OWoM 
-* Difficulty predicting what happens when negative OWoM propagates through a large audience
-
----
-# Online Firestorm Erupting 
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/of_eruption.png"
-knitr::include_graphics(url)
-```
-
----
-# Online Firestorm Prevention 
-
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/of_prevention.png"
-knitr::include_graphics(url)
-```
-
----
-# Online Firestorm Mitigation
-
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/of_mitigation.png"
-knitr::include_graphics(url)
-```
-
----
-class: font140
-# Data 
-
-**Source**: Facebook Brand Communities for S&P 500 companies 
-
-**Date Range**: October 2011 to Jan 2016
-
-**Sample**: 472,995 negative posts across 89 online brand communities
-
-**Important Definitions**:
-
-* SST = strength of structural ties
-  * Likes + comments $\times$ Given / received in community by a poster 
-
-* LSM = linguistic similarity
-  * How similar is complaining customers language with that of the existing posts in brand community
-
-**Lurking question?** Firestorms vs Product Harm crises? 
-
-* Firestorms emerge and end usually within 24 hours
-
----
-# The Paper in a Nutshell
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/of_paper_nutshell.png"
-knitr::include_graphics(url)
-```
-
----
-# Predicting Firestorms
-
-```{r, echo = FALSE, fig.align = "center", out.width="80%"}
-url <- "figs/of_model_prediction.png"
-knitr::include_graphics(url)
-```
-
----
-# Prevention 
-
-```{r, echo = FALSE, fig.align = "center", out.width="70%"}
-url <- "figs/of_model_prevention.png"
-knitr::include_graphics(url)
-```
-
----
-# Mitigation
-
-```{r, echo = FALSE, fig.align = "center", out.width="60%"}
-url <- "figs/of_model_mitigation.png"
-knitr::include_graphics(url)
-```
-
----
-class: font150
-# Summary 
-
-```{r, echo = FALSE, fig.align = "center", out.width="100%"}
-url <- "figs/of_summary.png"
-knitr::include_graphics(url)
-```
-
-Remark: Everything here is **correlation**
-
-* Don't be swayed by authors want to interpret causally 
 
 ---
 class: inverse, center, middle
@@ -486,11 +669,14 @@ class: font160
 * Much debate about **volume versus sentiment** of user generated content and their **impacts on demand for products** 
   * Know which paper pushes which story and (intuitively) how 
   * Older estimates are large, **new estimates** are **much smaller** but significant 
+
+* Ads more likely to be shared when they are creative and informative
+  * Driven by socially connected people seeking to increase social status
+
+
 * **Trade off** between **shareability** and **KPI performance** of ads 
-  * "Valuably Viral" ads use emotion and branding to try and balance both 
-* Responding to **online firestorms** requires managers to **respond in a fast and tailored way**
-  * Eg: High arousal $\rightarrow$ explanation 
-  * Vary use of empathy and explanation if needing to reply to multiple messages around same issue
+  * "Valuably Viral" ads use emotion and branding to try and balance shareability and performance 
+
 
 
 ---
@@ -499,11 +685,11 @@ class: font160
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{deerdsms2022,
+@misc{deerdsms2023,
       title={"Digital and Social Media Strategies: Word of Mouth & Virality"},
       author={Lachlan Deer},
-      year={2022},
-      url = "https://github.com/tisem-digital-marketing/dsms-lecture-12-wom-virality"
+      year={2023},
+      url = "https://github.com/deer-marketing-lab/dsms-lecture-wom-virality"
 }
 ```
 
