@@ -115,3 +115,112 @@ knitr::include_graphics(url)
 Remark: Everything here is **correlation**
 
 * Don't be swayed by authors want to interpret causally 
+
+---
+class: font160
+# Motivation 
+
+**Strategic Question**: How to design ads to *seed* a viral advertising campaign
+
+Dimensions studied:
+
+* Creativity: intruguing, entertaining, gains consumer's attention 
+* Informativeness: provides needed information or essential facts
+
+**Why relevant?** 
+
+* Dimensions under a firm's control 
+* At the expense of advertising effectiveness 
+
+
+---
+# Conceptual Framework 
+
+<br>
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_conceptual.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font150
+# Flow of the Paper: Lab Studies 
+
+Multiple studies $\rightarrow$ "Typical" consumer behaviour style paper
+
+**Study 1** Field data: Views of YouTube ads
+
+* Do certain types of ads generate more virality in "real" data?
+
+**Study 2**: Real Ads *and* circulation intentions 
+
+* For propagators vs non-propagators 
+
+**Study 3**: Vary creativity and informativeness of a focal ad
+
+* Control the ad content
+* Remove omitted variable bias driven by product category of the real ads
+
+---
+class: font160
+# Study 1: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_results.png"
+knitr::include_graphics(url)
+```
+
+* Creativity and informativeness positively correlated with views
+* Propagators too 
+  * Measured by number of comments ... so take this with a grain of salt
+
+
+---
+class: font140
+# Study 2: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+url <- "figs/propogate_study2_results.png"
+knitr::include_graphics(url)
+```
+
+* Higher creativity associated with higher intent to disseminate
+* Propogators even more likely when highly informative and highly creative
+
+*Remark*: Propagator defined as "having friends" and "talking to them a lot"
+
+---
+# Study 3: Manipulating the Ad Content
+
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+url <- "figs/propogate_study3_stimuli.png"
+knitr::include_graphics(url)
+```
+
+---
+class: font140
+# Study 3: Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+url <- "figs/propogate_results.png"
+knitr::include_graphics(url)
+```
+
+Dissemination: 
+
+* High creativity positively associated with intent to share
+* High creativity and highly informative even more so for propagators 
+
+Social Status elevation: (a mechanism)
+
+* Propagators do this to elevate their social status
+
+---
+class: font160
+# Takeaways
+
+* Ads more likely to be shared when they are creative and informative 
+  * Even more likely for more socially connected individuals
+
+* Driven by socially connected individuals desire to elevate (perceived) social status 
