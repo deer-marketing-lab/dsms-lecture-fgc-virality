@@ -71,7 +71,7 @@ class: inverse, center, middle
 class: font160
 # Do Firm Tweets Matter?
 
-**Motivation**: Does tweeting increase demand for their products
+**Strategic Question**: Does tweeting increase demand for their products?
 
 **Specific Questions**:
 
@@ -138,7 +138,7 @@ class: font160
 **Improvised Marketing Interventions (IMI)**: composition and execution of a real-time marketing communication
 proximal to an external event
 
-**Motivation**: Are IMI's effective at generating online sharing?
+**Strategic Question**: Are IMI's effective at generating online sharing?
 
 **Specific Questions**:
 
@@ -241,7 +241,7 @@ class: inverse, center, middle
 class: font160
 # What Drives Online Sharing?
 
-**Motivation**: What characteristics of an ad enhance its shareability? 
+**Strategic Question**: What characteristics of an ad enhance its shareability? 
 
 **Specific Questions**:
 
@@ -251,7 +251,7 @@ class: font160
 
 **How?**: Online video ads on YouTube
 
-* Note: Paper is descriptive / predictive rather than causal
+* **Remark**: Paper is descriptive rather than causal
 
 ---
 class: font160
@@ -521,7 +521,7 @@ class: font160
 # Summary 
 
 * Company tweets (these are ads) can generate demand, influential retweets even more
-  * mechanism: attracting a new audience 
+  * Mechanism: attracting a new audience 
 
 * Improvised Marketing Interventions are heavily shared when they are timely and involve humor and aren't anticipated
 
@@ -531,10 +531,256 @@ class: font160
     * There are exceptions here - new products, expensive products
   * Careful placement of brand name
 
-* **Trade off** between **shareability** and **KPI performance** of ads 
+* Trade off between shareability and KPI performance of ads 
   * "Valuably Viral" ads use emotion and branding to try and balance shareability and performance 
 
+---
+class: inverse, center, middle
 
+# Course Wrap Up
+
+---
+class: font160
+# Topic Coverage 
+
+
+```{r, echo = FALSE, fig.align = "center", out.width="20%"}
+url <- "figs/pngtree-pile-of-cartoonish-cute-doodle-theme-books-png-image_6871556.png"
+knitr::include_graphics(url)
+```
+
+1.  Measuring Advertising Effects
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Attribution Models
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Media Mix Models
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Field Experiment Basics
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Incrementality Experiments in Advertising
+2. User Generated Content & Social Media
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Online Reviews
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Word of Mouth & Influencers
+  * `r icons:::icon_style(icons::fontawesome("check", style = "solid"), scale = 1)` Firm Generated Content & Viral Marketing
+
+
+
+---
+class: font160
+# We read papers! 
+
+**Why?** 
+
+* We wanted the latest info, common causal methodologies 
+* Marketing books often throw causality out of the window 
+* And then professionals wonder why they don't see large effects
+
+Even if the "latest info" was 5-10 years old ...
+
+* Which was rarely the case!
+* I don't see it summarised in books
+
+---
+class: font160
+#  We wanted academic marketing knowledge!
+
+**Why?**
+
+* Approx 50% of marketers in the field have not studied marketing 
+  * There's a large knowledge gap in the field
+  * Which slows down progress in firms 
+
+* Practitioners often reluctant to engage with marketing academia 
+  * Reasons:  complexity, perceived relevance, abstract nature
+
+---
+class: font150
+# Why Lack of Academic Knowledge Matters
+
+1. **Ineffective Marketing Strategies** 
+
+2. **Misalignment with Consumer Needs**
+
+3. **Poor Understanding of Marketing Metrics** 
+
+4. Ethical Concerns 
+
+5. **Reduced Innovation** 
+
+6. **Diminishing Consumer Experience**
+
+I hope this class gave you insights to these aspects
+
+---
+class: font160
+# Lectures  
+
+Condense papers into a common structure: 
+
+* What is the question? Why is it relevant?
+* How can one measure this? 
+* What did we find?  
+
+---
+class: font160
+# Why "so much" data/stats?
+
+**Almost always**: one method, one type of analysis
+
+* Experiment (Firm controlled OR Quasi/Natural)
+* Linear Regression / Difference in Differences 
+* Just the beginning of a larger set of tools 
+
+**My mantra:** If you can't measure it, you can't build an effective strategy around it 
+
+* Ideally, with causal measurement 
+* Appreciating the **how** helps you contextualize results 
+  * Otherwise it's memorizing stylized facts
+
+---
+class: font160
+# We used R! 
+
+There *was* a learning curve 
+
+* We might've handled that better than we did ... 
+* And expect to next year 
+
+But you have a *valuable* skill 
+
+* That employers care about, and/or 
+* Helps you if you move into Master's study
+
+---
+class: font160
+# Evaluations 
+
+Link here: https://app.evalytics.nl/#/login?evaluationId=118955
+
+**Let us know your thoughts!**
+
+* We want to know what you think 
+* Particularly if you have constructive ways to improve the class 
+* Context is king ... the more you explain your situation the easier we understand your thoughts
+  * i.e. I'm happy to read longer, or less positive comments that provide context
+
+.center[**My Goal: 50% response rate**]
+
+---
+class: font160
+# Exam Structure 
+
+**PART A: 15 Multiple Choice Questions - 30%** 
+
+* High level stuff, less nitty gritty
+
+**PART B: 7 Short Answer questions - 70%**
+
+* Each question is worth 10 points, each question roughly corresponds to one lecture
+* Split into multiple parts to help you answer what we're looking for 
+
+
+.center[**Sentence LIMITS apply**]
+
+---
+class: font160
+# What can YOU bring to the Exam? 
+
+* NO calculators 
+  * Nothing to calculate that is difficult 
+
+* NO Dictionaries 
+
+* NO Notes 
+
+---
+class: font160
+# What's Available to You?
+
+**Course Lecture Slides**
+
+* Look at the *learning goals*!
+
+**Lab Assignments**
+
+* 6 documents, approx 100 questions! 
+
+**Mock Exam**
+
+* Same structure, **different** questions
+
+---
+class: font160
+# Why Limited Solution Availability?
+
+**My experience**: answers $\rightarrow$ learning the answers 
+
+* Rather than understanding material 
+
+**Leads to low grades**
+
+* Especially outside of multiple choice questions 
+
+**ALL answers are in the slides + papers** 
+
+* **Mainly the slides**
+* Revise by looking for the answer + discussing with peers 
+* Specific questions? Email us ... use the **COURSE** email address 
+  * Not our personal ones 
+  * (Why?) doesn't get lost in daily email volume
+
+---
+class: font160
+
+# Email Policy Before the Exam 
+
+.center[**NO answers** within 48 hours of the exams] 
+
+* One Exception: Emergencies 
+
+---
+class: inverse, center, middle
+
+# Parting Thoughts 
+
+---
+class: font160
+# For the Exam
+
+**Be explicit**
+
+* **Write**, even when you don't know the answer, write your thoughts
+* Clearly express yourself via **assumptions, interpretations, caveats** where needed
+* We can't grade what we can't see
+
+**Use your time wisely** (and in proportion to the weight of a question)
+
+It's a **marketing class**
+  * That uses an analytic toolkit to answer a question
+  * But be open minded with what 'marketing' is
+
+---
+class: font160
+# Going Bigger
+
+I hope the class has shown that **good analytics is critical for marketing strategy**
+
+* Not only in digital marketing
+
+
+If you enjoyed picking up the skills along the way:
+
+* Pursue an analytics career, there's **lots of employer demand**
+* ... even among firms who don't know it yet
+
+If you found it more painful than fun, but persisted:
+
+* When you work with an analytics team on a project you can appreciate how the sausage was made 
+  * It's **not easy**, it **is time consuming**
+
+---
+class: clear
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+url <- "figs/goodluck.jpg"
+knitr::include_graphics(url)
+```
 
 ---
 # License & Citation
