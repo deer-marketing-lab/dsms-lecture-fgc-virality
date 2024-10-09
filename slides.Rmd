@@ -51,8 +51,9 @@ Course Themes:
 class: font160
 # Today's Topic Coverage
 
-* Can firm generated content on social media increase product demand?
-  * [Gong, Zhang, Zhao and Jiang (2017)](https://dspace.mit.edu/handle/1721.1/120756)
+Can firm generated content on social media increase product demand?
+
+* [Gong, Zhang, Zhao and Jiang (2017)](https://dspace.mit.edu/handle/1721.1/120756)
 
 
 What helps ads go viral?
@@ -111,6 +112,20 @@ knitr::include_graphics("figs/gong_quant.png")
 ```
 
 ---
+# Results III 
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+knitr::include_graphics("figs/gong_display_info.png")
+```
+
+---
+# Results IV
+
+```{r, echo = FALSE, fig.align = "center", out.width="100%"}
+knitr::include_graphics("figs/gong_followers.png")
+```
+
+---
 class: font150
 # Main Takeaways
 
@@ -122,7 +137,6 @@ class: font150
 **What's the mechanism?** (subtle)
 
 * Influential tweets with broadcast time info attract new viewers
-  *  Table 8 and 9
 * Informative tweets (broadcast time) also attract new followers to company page
 
 
@@ -651,7 +665,7 @@ But you have a *valuable* skill
 class: font160
 # Evaluations 
 
-Link here: https://app.evalytics.nl/#/login?evaluationId=118955
+Link here: https://app.evalytics.nl/#/login?evaluationId=158180
 
 **Let us know your thoughts!**
 
